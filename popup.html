@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Saver</title>
+  <style>
+    /* Your custom CSS here */
+    body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #292b2c !important;
+    color: #ccc !important;
+    }
+
+    h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* Light text color for headings */
+    }
+
+    label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ccc; /* Light text color for labels */
+    }
+
+    input[type="text"],
+    textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    background-color: #333 !important;
+    color: #fff; /* Set text color to white */
+    border-radius: 5px;
+    }
+
+
+    button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    .entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #555; /* Darker border color */
+    background-color: #444; /* Dark background color for list entries */
+    border-radius: 5px;
+    }
+
+    .entry-heading {
+    flex: 1;
+    min-width: 300px; /* Set a fixed minimum width for headings */
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff; /* Light text color for entry headings */
+    }
+
+    .entry-content {
+    flex: 2;
+    margin-right: 10px;
+    color: #ccc; /* Light text color for entry content */
+    }
+
+    .buttons {
+    display: flex;
+    align-items: center;
+    }
+
+    .remove-button {
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    }
+
+    .copy-button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    }
+
+    ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+  </style>
+  <!-- Add this inside the <head> section of popup.html -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Text Saver</h1>
+    <ul id="headingList"></ul>
+    <form id="textForm">
+      <div class="form-group">
+        <label for="heading">Heading:</label>
+        <input type="text" id="heading" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea id="content" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="button" id="addButton" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
